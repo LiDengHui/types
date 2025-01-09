@@ -21,4 +21,8 @@
  * @typeParam T - 输入的类型，可能是联合类型或者数组类型。
  * @typeParam Seen - 递归过程中的历史类型记录，用于避免重复。
  */
-export type Unique<T, Seen = never> = T extends T ? (T extends Seen ? never : T | Unique<Exclude<T, T>, T | Seen>) : never;
+export type Unique<T, Seen = never> = T extends T
+    ? T extends Seen
+        ? never
+        : T | Unique<Exclude<T, T>, T | Seen>
+    : never;

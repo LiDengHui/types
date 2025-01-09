@@ -13,4 +13,6 @@
  * @typeParam S - 输入的字符串类型，例如 `'abc'`。
  * @typeParam Prefix - 用于构建组合的前缀，默认为空字符串 `''`，在递归过程中逐步构建。
  */
-export type AllCombinations<S extends string, Prefix extends string = ''> = S extends `${infer First}${infer Other}` ? AllCombinations<Other, Prefix> | AllCombinations<Other, `${Prefix}${First}`> : Prefix;
+export type AllCombinations<S extends string, Prefix extends string = ''> = S extends `${infer First}${infer Other}`
+    ? AllCombinations<Other, Prefix> | AllCombinations<Other, `${Prefix}${First}`>
+    : Prefix;

@@ -17,4 +17,8 @@
  *
  * @typeParam T - 输入的字符串类型。
  */
-export type Subsequences<T extends string> = T extends '' ? '' : T extends `${infer A}${infer Other}` ? `${A}${Subsequences<Other>}` | Subsequences<Other> : never;
+export type Subsequences<T extends string> = T extends ''
+    ? ''
+    : T extends `${infer A}${infer Other}`
+      ? `${A}${Subsequences<Other>}` | Subsequences<Other>
+      : never;

@@ -14,3 +14,5 @@ export * from './types/permutation';
 export * from './types/reverse';
 export * from './types/subsequences';
 export * from './types/unique';
+export * from './types/getOptional';
+export * from './types/deepPartial';

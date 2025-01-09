@@ -1,7 +1,10 @@
-//其他需要用到的自行去查资料啦
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import("prettier").Config}
+ */
 export default {
     // 设置prettier单行输出（不折行）的（最大）长度。
-    printWidth: 500,
+    printWidth: 120,
 
     // tab缩进大小,默认为2
     tabWidth: 4,
@@ -40,5 +43,5 @@ export default {
     // always 总是有括号
     arrowParens: 'always',
 
-    proseWrap: 'preserve'
-}
+    proseWrap: 'preserve',
+};

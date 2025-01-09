@@ -160,6 +160,21 @@ type Result = Unique<[1, 'a', 2, 'b', 1]>;
 // Result: [1, 'a', 2, 'b']
 ```
 
+### `GetOptional<T extends object>`
+Extracts the properties of an object type T that are optional.
+
+```ts
+
+type Result = GetOptional<{ a: number, b?: string, c?: boolean }>;
+// Result: 'b' | 'c'
+```
+### `DeepPartial<T>`
+Makes all properties of a type T and its nested properties optional recursively.
+
+```ts
+type Result = DeepPartial<{ a: { b: { c: number } } }>;
+// Result: { a?: { b?: { c?: number } } }
+```
 ## Usage Example
 
 ```ts

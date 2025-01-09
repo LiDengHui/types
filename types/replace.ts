@@ -22,4 +22,8 @@
  * @typeParam S - 需要替换的子字符串类型。
  * @typeParam M - 用于替换的新子字符串类型。
  */
-export type Replace<T extends string, S extends string, M extends string> = T extends '' ? '' : T extends `${infer A}${S}${infer B}` ? `${A}${M}${Replace<B, S, M>}` : T;
+export type Replace<T extends string, S extends string, M extends string> = T extends ''
+    ? ''
+    : T extends `${infer A}${S}${infer B}`
+      ? `${A}${M}${Replace<B, S, M>}`
+      : T;

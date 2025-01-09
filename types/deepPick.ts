@@ -27,4 +27,12 @@
  * @typeParam T - 要从中提取属性的对象类型。
  * @typeParam S - 用点分隔的路径字符串，例如 `'a.b.c'`。
  */
-export type DeepPick<T, S extends string> = S extends `${infer A}.${infer B}` ? (A extends keyof T ? DeepPick<T[A], B> : never) : S extends keyof T ? (T[S] extends object ? T[S] : { [key in S]: T[S] }) : never;
+export type DeepPick<T, S extends string> = S extends `${infer A}.${infer B}`
+    ? A extends keyof T
+        ? DeepPick<T[A], B>
+        : never
+    : S extends keyof T
+      ? T[S] extends object
+          ? T[S]
+          : { [key in S]: T[S] }
+      : never;

@@ -13,7 +13,11 @@
  * @typeParam T - 要排列的字符联合类型。
  * @typeParam K - 当前排列的基准（默认为 `T`）。
  */
-export type PermutationBase<T, K = T> = [T] extends [never] ? '' : K extends K ? `${K & string}${PermutationBase<Exclude<T, K>>}` : never;
+export type PermutationBase<T, K = T> = [T] extends [never]
+    ? ''
+    : K extends K
+      ? `${K & string}${PermutationBase<Exclude<T, K>>}`
+      : never;
 
 /**
  * 提取字符串类型 `T` 的每个字符作为单独的联合类型。

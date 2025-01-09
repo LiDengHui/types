@@ -25,5 +25,7 @@
  * @typeParam Prefix - 内部使用，用于拼接键名前缀。
  */
 export type Flatten<T, Prefix extends string = ''> = {
-    [K in keyof T]: T[K] extends object ? Flatten<T[K], `${Prefix}${K & string}.`> : { [P in `${Prefix}${K & string}`]: T[K] };
+    [K in keyof T]: T[K] extends object
+        ? Flatten<T[K], `${Prefix}${K & string}.`>
+        : { [P in `${Prefix}${K & string}`]: T[K] };
 }[keyof T];
