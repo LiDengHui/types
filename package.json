@@ -1,0 +1,29 @@
+{
+    "name": "@dhlx/types",
+    "version": "0.0.1",
+    "module": "index.ts",
+    "main": "index.ts",
+    "types": "index.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc"
+    },
+    "peerDependencies": {
+        "typescript": "^5.7.2"
+    },
+    "dependencies": {
+        "prettier": "^3.4.2"
+    },
+    "author": "lidenghui <3379489032@qq.com>",
+    "license": "MIT",
+    "description": "typescript 工具类型",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lidenghui/types.git"
+    },
+    "keywords": [
+        "typescript",
+        "utility",
+        "types"
+    ]
+}
