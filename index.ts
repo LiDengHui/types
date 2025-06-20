@@ -16,4 +16,5 @@ export * from './types/subsequences';
 export * from './types/unique';
 export * from './types/getOptional';
 export * from './types/deepPartial';
-export * from "./types/functionKeysObject.ts"
+export * from './types/functionKeysObject';
+export * from './types/optional';
