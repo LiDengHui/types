@@ -1,6 +1,6 @@
 {
     "name": "@dhlx/types",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "module": "index.ts",
     "main": "index.ts",
     "types": "index.ts",
